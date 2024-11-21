@@ -1,0 +1,169 @@
+:root {
+  --text-color: #222;
+  --headings-text-color: #00FF2C;
+  --back-color: #ecf0f1;
+  --logo-text:#ecf0f1;
+  --link-back-color: white;
+  --shadow-color:rgb(255, 255, 255);
+}
+
+[data-theme='dark'] {
+  --text-color: #fff;
+  --headings-text-color: #00FF2C;
+  --back-color: #222222;
+  --logo-text:#222222;
+  --link-back-color: #333;
+  --shadow-color:rgba(0,0,0,1);
+
+}
+
+/* Base styles for the Navbar */
+.navbar {
+  position: sticky;
+  z-index: 100;
+  border-radius: 10px;
+  top: 0;
+  width: 100%;
+  background-color: var(--back-color);
+  color: white;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 1000;
+}
+
+.navbar-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+  
+  .navbar-logo a {
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+  }
+.logo-back{
+  background-color: var(--headings-text-color);
+  padding: 0 7px;
+  border-radius: 10px;
+}
+
+.logo{
+  color: var(--logo-text);
+}
+  
+  /* Hide toggle button on larger screens */
+  .navbar-toggle {
+    font-size: 1.5rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+  }
+  
+  /* Navbar links - default for desktop */
+  .navbar-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    width: 100%;
+    justify-content: center;
+    padding: 0;
+    margin-top: 1rem;
+  }
+  
+  .navbar-links {
+    position: absolute;
+    top: 0; 
+    right: 0;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    transition: transform 0.3s ease;
+    gap: 1rem;
+    padding: 1.2rem 0;
+    list-style: none;
+  }
+
+  .navbar-links a {
+    color: var(--text-color); 
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-right: 30px; 
+    transition: color 0.3s ease;
+    font-family: 'Rubik', sans-serif;
+  }
+  
+  .navbar-links a:hover {
+    color: var(--headings-text-color);
+  }
+  
+  /* Mobile responsive styles */
+  @media (max-width: 768px) {
+
+    .navbar-toggle {
+      display: block;
+      color: var(--text-color);
+    }
+  
+    .navbar-links {
+      position: absolute;
+      z-index: -1000;
+      top: 100%;
+      border-radius: 20px;
+      right: 0;
+      background-color: var(--link-back-color);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 60vh; 
+      transform: translateY(-100%);
+      transition: transform 0.3s ease;
+      gap: 1rem;
+      padding: 1rem 0;
+    }
+
+    .navbar-links a{
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+  
+    /* Show the menu when open */
+    .navbar-links.open {
+      transform: translateY(0);
+      z-index: 999; 
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 800px){
+    .navbar-toggle {
+      display: block;
+      color: var(--text-color);
+    }
+  
+    .navbar-links {
+      position: absolute;
+      z-index: -1000;
+      top: 100%;
+      border-radius: 20px;
+      right: 0;
+      background-color: var(--link-back-color);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 60vh; 
+      transform: translateY(-100%);
+      transition: transform 0.3s ease;
+      gap: 1rem;
+      padding: 1rem 0;
+    }
+
+  }
