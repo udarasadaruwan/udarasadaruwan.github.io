@@ -7,11 +7,24 @@ import Contact from './sections/Contact/Contact';
 import Footer from './sections/Footer/Footer';
 import { useInView } from 'react-intersection-observer';
 import UpArrow from './sections/UpArrow/UpArrow';
+import ReactGA from "react-ga4";
+
+ReactGA.initialize("G-2CHEKCEGQV");
+ReactGA.send("pageview");
 
 function Section({ id, children }) {
   const { ref, inView } = useInView({
     threshold: 0.1,
   });
+
+  // Track section visibility as an event
+  if (inView) {
+    ReactGA.event({
+      category: 'Section',
+      action: 'Viewed',
+      label: id,
+    });
+  }
 
   return (
     <div
