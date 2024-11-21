@@ -52,3 +52,8 @@ To run the project locally, follow these steps:
    ```bash
    npm run dev
 
+## Contributing
+Contributions, issues, and feature requests are welcome! Feel free to fork the repository and create a pull request.
+
+## License
+This project is open-source and available under the MIT License.
