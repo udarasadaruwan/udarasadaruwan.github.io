@@ -72,8 +72,6 @@ function Skills() {
             <SkillList src={checkMarkIcon} skill="GitHub" />
             <SkillList src={checkMarkIcon} skill="Bootstrap" />
             <SkillList src={checkMarkIcon} skill="SASS" />
-            <SkillList src={checkMarkIcon} skill="Jest" />
-            <SkillList src={checkMarkIcon} skill="Webpack" />
           </div>
         </div>
       </div>
