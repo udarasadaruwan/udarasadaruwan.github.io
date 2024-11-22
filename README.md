@@ -2,6 +2,9 @@
 
 A responsive and interactive portfolio website built using **React** and **Vite**. This project showcases my skills, projects, and ways to contact me. It includes modern animations and a clean UI for a seamless user experience.
 
+## Live
+https://udarasadaruwan.github.io/
+
 ## Features
 
 - **Responsive Design:** Fully functional across devices of all screen sizes.
