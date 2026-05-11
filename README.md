@@ -28,7 +28,7 @@ Here are screenshots of the portfolio site:
 
 ### Hero Section
 
-![Hero Section](./src/assets/port1.jpeg)
+![Hero Section](./src/assets/port1n.jpeg)
 
 ### Milestones Section
 
