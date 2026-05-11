@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -9,61 +9,130 @@ html {
 }
 
 :root {
-  --background-color: #ecf0f1;
-  --btn-color: #0987f2;
-  --btn-text-color: #fff;
-  --project-card-bg: #ffffff00;
-  --text-color: #222;
-  --form-text-color: #555;
-  --footer-text-color: #888;
-  --headings-text-color: #00FF2C;
+  --background-color: #f7f9fb;
+  --surface-color: rgba(255, 255, 255, 0.82);
+  --surface-strong-color: #ffffff;
+  --btn-color: #111827;
+  --btn-text-color: #ffffff;
+  --project-card-bg: rgba(255, 255, 255, 0.9);
+  --text-color: #121826;
+  --muted-text-color: #5d6678;
+  --form-text-color: #354052;
+  --footer-text-color: #6b7280;
+  --headings-text-color: #17b26a;
+  --accent-color: #17b26a;
+  --accent-2: #0ea5e9;
+  --accent-3: #f59e0b;
+  --border-color: rgba(17, 24, 39, 0.12);
+  --chip-bg: rgba(23, 178, 106, 0.1);
+  --shadow-color: rgba(17, 24, 39, 0.12);
+  --soft-shadow: 0 20px 60px rgba(17, 24, 39, 0.12);
+  --nav-bg: rgba(247, 249, 251, 0.82);
+  --logo-text: #f7f9fb;
 }
 
-[data-theme='dark'] {
-  --background-color: #222;
-  --btn-color: #fff;
-  --btn-text-color: #222;
-  --project-card-bg: #fff;
-  --text-color: #fff;
-  --form-text-color: #fff;
-  --footer-text-color: #bbb;
-  --headings-text-color: #00FF2C;
+[data-theme="dark"] {
+  --background-color: #0b0f14;
+  --surface-color: rgba(17, 25, 40, 0.78);
+  --surface-strong-color: #111928;
+  --btn-color: #3ddc97;
+  --btn-text-color: #06130d;
+  --project-card-bg: rgba(17, 25, 40, 0.84);
+  --text-color: #f5f7fb;
+  --muted-text-color: #a8b3c7;
+  --form-text-color: #f5f7fb;
+  --footer-text-color: #9aa5b8;
+  --headings-text-color: #3ddc97;
+  --accent-color: #3ddc97;
+  --accent-2: #5eead4;
+  --accent-3: #ffc266;
+  --border-color: rgba(255, 255, 255, 0.13);
+  --chip-bg: rgba(61, 220, 151, 0.13);
+  --shadow-color: rgba(0, 0, 0, 0.38);
+  --soft-shadow: 0 24px 70px rgba(0, 0, 0, 0.32);
+  --nav-bg: rgba(11, 15, 20, 0.72);
+  --logo-text: #06130d;
 }
 
 html {
-  scroll-behavior: smooth; 
-  scroll-padding-top: 80px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 104px;
 }
 
 .section {
-  opacity: 0; 
-  transform: translateY(30px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  opacity: 0;
+  scroll-margin-top: 104px;
+  transform: translateY(38px) scale(0.98);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform, filter;
+}
+
+.section:not(#hero) {
+  padding-top: 18px;
 }
 
 .section.animate {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
+}
+
+.section > section {
+  transform-origin: center top;
 }
 
 body {
-  background-color: var(--background-color);
+  min-width: 320px;
+  overflow-x: hidden;
+  background:
+    linear-gradient(90deg, rgba(61, 220, 151, 0.06) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(94, 234, 212, 0.05) 1px, transparent 1px),
+    linear-gradient(135deg, rgba(61, 220, 151, 0.08), transparent 34%),
+    linear-gradient(315deg, rgba(245, 158, 11, 0.08), transparent 32%),
+    var(--background-color);
+  background-size:
+    72px 72px,
+    72px 72px,
+    auto,
+    auto,
+    auto;
   display: flex;
   justify-content: center;
   margin: 0 auto 60px;
+  color: var(--text-color);
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
 }
 
 #root {
-  display: flex;
-  flex-direction: column;
-  gap: 60px;
+  width: 100%;
 }
 
-.mHeddings{
+.siteFrame {
+  width: 100%;
+  min-height: 100dvh;
+}
+
+.appShell {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+  padding: 24px 0 64px;
+}
+
+.mHeddings {
   color: var(--headings-text-color);
 }
 
-h1{
+h1 {
   color: var(--headings-text-color);
 }
 
@@ -78,7 +147,14 @@ p {
 h2,
 h3,
 p {
-  font-family: 'Roboto Mono', monospace;
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
 }
 
 h1,
@@ -92,8 +168,10 @@ h3 {
 }
 
 h1 {
-  font-family: 'Rubik', sans-serif;
-  font-size: 32px;
+  font-family: Rubik, Inter, ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(32px, 9vw, 74px);
+  line-height: 1;
+  letter-spacing: 0;
 }
 
 p {
@@ -102,21 +180,94 @@ p {
 }
 
 .sectionTitle {
-  margin-bottom: 30px;
-  margin-top: 100px;
+  width: fit-content;
+  margin: 0 auto 22px;
+  position: relative;
+  text-align: center;
+  text-shadow: 0 0 28px rgba(61, 220, 151, 0.22);
+}
+
+.sectionTitle::after {
+  position: absolute;
+  left: 50%;
+  bottom: -14px;
+  width: 76px;
+  height: 3px;
+  content: "";
+  background: linear-gradient(
+    90deg,
+    var(--accent-color),
+    var(--accent-2),
+    var(--accent-3)
+  );
+  border-radius: 999px;
+  transform: translateX(-50%);
 }
 
 .hover {
   cursor: pointer;
 }
 
-@media (width >= 800px) {
-  #root {
-    gap: 100px;
-  }
+a,
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button,
+a,
+input[type="submit"] {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (width <= 520px) {
   h1 {
-    font-size: 40px;
+    font-size: clamp(30px, 10vw, 42px);
+    line-height: 1.03;
   }
+
+  p {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .sectionTitle {
+    margin-bottom: 18px;
+  }
+
+  .sectionTitle::after {
+    bottom: -11px;
+    width: 64px;
+  }
+
+  .appShell {
+    gap: 58px;
+    padding: 18px 0 52px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (width >= 800px) {
+  .section:not(#hero) {
+    padding-top: 26px;
+  }
+
+  .appShell {
+    gap: 88px;
+    padding: 28px 0 78px;
+  }
+
   h2,
   h3 {
     font-size: 24px;
@@ -126,19 +277,16 @@ p {
   }
 
   .sectionTitle {
-    margin-bottom: 60px;
+    margin-bottom: 38px;
   }
 
   @media (width >= 1400px) {
-    #root {
-      gap: 200px;
-    }
-    h1 {
-      font-size: 48px;
+    .appShell {
+      gap: 104px;
     }
 
     .sectionTitle {
-      margin-bottom: 75px;
+      margin-bottom: 44px;
     }
   }
 }

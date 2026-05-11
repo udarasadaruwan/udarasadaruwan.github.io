@@ -1,7 +1,7 @@
-import React, { useEffect, useMemo, useState } from "react";
-import { useTheme } from "next-themes";
+import { useEffect, useMemo, useState } from "react";
 import { Cloud, fetchSimpleIcons, renderSimpleIcon } from "react-icon-cloud";
 import PropTypes from 'prop-types';
+import { useTheme } from './ThemeContext';
 
 const cloudProps = {
     containerProps: {
@@ -10,19 +10,19 @@ const cloudProps = {
             justifyContent: "center",
             alignItems: "center",
             width: "100%",
-            paddingTop: 10,
-            minHeight: '200px', // Ensure some height
-            maxHeight: '350px', // Ensure some height
+            height: "100%",
+            minHeight: "320px",
+            overflow: "hidden",
         },
     },
     options: {
         reverse: true,
-        depth: 1,
+        depth: 0.85,
         wheelZoom: false,
-        imageScale: 2,
+        imageScale: 1.75,
         activeCursor: "default",
         tooltip: "native",
-        initial: [0.1, -0.1],
+        initial: [0.08, -0.08],
         clickToFront: 500,
         tooltipDelay: 0,
         outlineColour: "#0000",
@@ -32,8 +32,8 @@ const cloudProps = {
 };
 
 const renderCustomIcon = (icon, theme) => {
-    const bgHex = theme === "light" ? "#f3f2ef" : "#080510";
-    const fallbackHex = theme === "light" ? "#6e6e73" : "#ffffff";
+    const bgHex = theme === "light" ? "#f7f9fb" : "#0b0f14";
+    const fallbackHex = theme === "light" ? "#354052" : "#f5f7fb";
     const minContrastRatio = theme === "dark" ? 2 : 1.2;
 
     return renderSimpleIcon({
@@ -78,17 +78,28 @@ function IconCloud({ iconSlugs }) {
     }, [data, theme]);
 
     if (error) {
-        return <div>Error loading icons: {error.message}</div>;
+        return <div style={{ color: 'var(--muted-text-color)' }}>Error loading icons: {error.message}</div>;
     }
 
     if (!renderedIcons) {
-        return <div>Loading icons...</div>;
+        return <div style={{ color: 'var(--muted-text-color)' }}>Loading icons...</div>;
     }
 
     return (
-        <Cloud {...cloudProps}>
-            {renderedIcons}
-        </Cloud>
+        <div
+            style={{
+                width: '100%',
+                height: '100%',
+                minHeight: 320,
+                display: 'grid',
+                placeItems: 'center',
+                overflow: 'hidden',
+            }}
+        >
+            <Cloud {...cloudProps}>
+                {renderedIcons}
+            </Cloud>
+        </div>
     );
 }
 

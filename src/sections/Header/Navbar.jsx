@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import './Navbar.css';  // Remember to create this file for styling
+import { useState } from 'react';
+import './Navbar.css';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,13 +19,21 @@ const Navbar = () => {
           </a>
         </div>
 
-        <button className="navbar-toggle" onClick={toggleMenu}>
-          {isOpen ? '✕' : '☰'}
+        <button
+          className={`navbar-toggle ${isOpen ? 'active' : ''}`}
+          onClick={toggleMenu}
+          aria-label="Toggle navigation"
+          aria-expanded={isOpen}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
       </div>
 
       <ul className={`navbar-links ${isOpen ? 'open' : ''}`}>
         <li><a href="#hero" onClick={toggleMenu}>Home</a></li>
+        <li><a href="#milestones" onClick={toggleMenu}>Milestones</a></li>
         <li><a href="#projects" onClick={toggleMenu}>Projects</a></li>
         <li><a href="#skills" onClick={toggleMenu}>Skills</a></li>
         <li><a href="#contact" onClick={toggleMenu}>Contact</a></li>

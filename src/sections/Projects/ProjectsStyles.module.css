@@ -1,39 +1,123 @@
 .container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   text-align: center;
+  width: min(1120px, calc(100vw - 32px));
+  margin: 0 auto;
 
   img {
-    max-width: 250px;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
     align-self: center;
     background-color: var(--project-card-bg);
-    border-radius: 20px;
+    border-radius: 8px;
+    transition: transform 260ms ease, filter 260ms ease;
   }
 
   a {
-    width: fit-content;
+    position: relative;
+    width: min(100%, 310px);
+    min-height: 390px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 14px;
+    overflow: hidden;
+    text-align: left;
     text-decoration: none;
-    color: #222;
-    transition: transform 200ms ease-in-out;
+    color: var(--text-color);
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: var(--soft-shadow);
+    transition: border-color 220ms ease, background 220ms ease;
   }
 
   a:hover {
-    transform: scale(1.05);
+    border-color: var(--accent-color);
+    background: var(--surface-strong-color);
+  }
+
+  a:hover img {
+    transform: scale(1.035);
+    filter: saturate(1.1);
+  }
+
+  h3 {
+    margin-bottom: 8px;
+    font-size: 22px;
+    line-height: 1.2;
+    text-transform: none;
+  }
+
+  p {
+    color: var(--muted-text-color);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  span {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+  }
+
+  small {
+    padding: 7px 9px;
+    color: var(--accent-color);
+    background: var(--chip-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 12px;
+    font-weight: 700;
   }
 }
 
-.projectsContainer {
+.headingBlock {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
+  gap: 12px;
+}
+
+.eyebrow {
+  color: var(--accent-2);
+  font-family: 'Roboto Mono', monospace;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.intro {
+  max-width: 650px;
+  margin-top: 8px;
+  color: var(--muted-text-color);
+  font-size: clamp(15px, 4.2vw, 18px);
+  line-height: 1.8;
+}
+
+.projectsContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 24px;
+  width: 100%;
+  margin-top: 56px;
 }
 
 @media (width >= 800px) {
   .projectsContainer {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 0 30px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+  }
+}
+
+@media (width >= 1120px) {
+  .projectsContainer {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }

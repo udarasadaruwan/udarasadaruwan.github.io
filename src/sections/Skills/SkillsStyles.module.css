@@ -3,6 +3,8 @@
   flex-direction: column;
   text-align: center;
   align-items: center;
+  width: min(1180px, calc(100vw - 32px));
+  margin: 0 auto;
 
 
   span {
@@ -16,18 +18,54 @@
   }
 }
 
-.skillCategories {
+.headingBlock {
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  width: 75vw;
+  align-items: center;
+  gap: 12px;
+}
+
+.eyebrow {
+  color: var(--accent-2);
+  font-family: 'Roboto Mono', monospace;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.intro {
+  max-width: 680px;
+  margin-top: 8px;
+  color: var(--muted-text-color);
+  font-size: clamp(15px, 4.2vw, 18px);
+  line-height: 1.8;
+}
+
+.skillCategories {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  width: 100%;
+  margin-top: 56px;
 }
 
 .category {
   width: 100%;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  padding: clamp(18px, 3vw, 26px);
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: var(--soft-shadow);
+  transition: border-color 220ms ease, background 220ms ease;
+}
+
+.category:hover {
+  border-color: var(--accent-color);
+  background: var(--surface-strong-color);
 }
 
 .categoryTitle {
@@ -41,15 +79,44 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 10px;
+}
+
+.skillList span {
+  max-width: 100%;
+  padding: 9px 11px;
+  background: var(--chip-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+.skillList p {
+  color: var(--text-color);
+  font-size: clamp(13px, 2.5vw, 15px);
+  font-weight: 700;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+  text-align: left;
 }
 
 .iconCloud {
-  margin-top: 80px;
-  width: 70vw;
+  margin-top: 70px;
+  width: min(760px, 90vw);
+  min-height: 380px;
+  padding: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: var(--soft-shadow);
+}
+
+.iconCloud > div {
+  width: 100%;
+  height: 100%;
 }
 
 hr {
@@ -60,17 +127,18 @@ hr {
   margin: 30px auto;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 700px) {
   .skillCategories {
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-
-  .category {
-    max-width: 30%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   hr {
     width: 300px;
+  }
+}
+
+@media (min-width: 1080px) {
+  .skillCategories {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }

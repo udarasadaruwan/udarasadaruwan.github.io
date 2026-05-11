@@ -4,6 +4,7 @@ import checkMarkIconLight from '../../assets/checkmark-light.svg';
 import SkillList from '../../common/SkillList';
 import { useTheme } from '../../common/ThemeContext';
 import IconCloud from '../../common/iconCloud';
+import { motion } from 'framer-motion';
 
 function Skills() {
   const { theme } = useTheme();
@@ -14,14 +15,13 @@ function Skills() {
     'css3',
     'javascript',
     'typescript',
-    'nodedotjs',
+    'nodejs',
     'java',
     'mysql',
     'react',
     'angular',
     'tailwindcss',
     'mongodb',
-    'mysql',
     'firebase',
     'springboot',
     'express',
@@ -32,14 +32,23 @@ function Skills() {
     'bootstrap',
     'sass',
     'python',
+    'intellijidea',
+    'visualstudiocode',
   ];
 
   return (
-    <section id="skills" className={styles.container}>
-      <h1 className="sectionTitle">Skills</h1>
+    <section className={styles.container}>
+      <div className={styles.headingBlock}>
+        <p className={styles.eyebrow}>Technical toolkit</p>
+        <h1 className="sectionTitle">Skills</h1>
+        <p className={styles.intro}>
+          A practical stack for designing interfaces, building APIs, and
+          shipping responsive web experiences.
+        </p>
+      </div>
 
       <div className={styles.skillCategories}>
-        <div className={styles.category}>
+        <motion.div className={styles.category} whileHover={{ y: -8 }}>
           <h2 className={styles.categoryTitle}>Frontend</h2>
           <div className={styles.skillList}>
             <SkillList src={checkMarkIcon} skill="HTML" />
@@ -47,12 +56,13 @@ function Skills() {
             <SkillList src={checkMarkIcon} skill="JavaScript" />
             <SkillList src={checkMarkIcon} skill="TypeScript" />
             <SkillList src={checkMarkIcon} skill="React" />
+            <SkillList src={checkMarkIcon} skill="React Native" />
             <SkillList src={checkMarkIcon} skill="Angular" />
             <SkillList src={checkMarkIcon} skill="Tailwind CSS" />
           </div>
-        </div>
+        </motion.div>
 
-        <div className={styles.category}>
+        <motion.div className={styles.category} whileHover={{ y: -8 }}>
           <h2 className={styles.categoryTitle}>Backend</h2>
           <div className={styles.skillList}>
             <SkillList src={checkMarkIcon} skill="Node.js" />
@@ -63,17 +73,19 @@ function Skills() {
             <SkillList src={checkMarkIcon} skill="MongoDB" />
             <SkillList src={checkMarkIcon} skill="MySQL" />
           </div>
-        </div>
+        </motion.div>
 
-        <div className={styles.category}>
+        <motion.div className={styles.category} whileHover={{ y: -8 }}>
           <h2 className={styles.categoryTitle}>Tools & Others</h2>
           <div className={styles.skillList}>
             <SkillList src={checkMarkIcon} skill="Git" />
             <SkillList src={checkMarkIcon} skill="GitHub" />
             <SkillList src={checkMarkIcon} skill="Bootstrap" />
             <SkillList src={checkMarkIcon} skill="SASS" />
+            <SkillList src={checkMarkIcon} skill="IntelliJ IDEA Ultimate" />
+            <SkillList src={checkMarkIcon} skill="VS Code" />
           </div>
-        </div>
+        </motion.div>
       </div>
 
       <div className={styles.iconCloud}>
