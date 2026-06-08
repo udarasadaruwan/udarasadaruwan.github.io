@@ -1,0 +1,10 @@
+/* TEAM */
+Creator: Udara Sandaruwan
+Site: https://udarasadaruwan.github.io/
+GitHub: https://github.com/udarasadaruwan
+LinkedIn: https://www.linkedin.com/in/udara-sandaruwan-ug0002/
+
+/* SITE */
+Type: Full-stack developer portfolio
+Built with: React, Vite, CSS Modules, Framer Motion
+Hosted on: GitHub Pages

@@ -40,7 +40,7 @@ function Skills() {
     <section className={styles.container}>
       <div className={styles.headingBlock}>
         <p className={styles.eyebrow}>Technical toolkit</p>
-        <h1 className="sectionTitle">Skills</h1>
+        <h2 className="sectionTitle">Skills</h2>
         <p className={styles.intro}>
           A practical stack for designing interfaces, building APIs, and
           shipping responsive web experiences.

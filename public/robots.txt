@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://udarasadaruwan.github.io/sitemap.xml
+
+AI-Content-Declaration: https://udarasadaruwan.github.io/llms.txt

@@ -39,7 +39,7 @@ function Projects() {
     <section className={styles.container}>
       <div className={styles.headingBlock}>
         <p className={styles.eyebrow}>Selected work</p>
-        <h1 className="sectionTitle">Projects</h1>
+        <h2 className="sectionTitle">Projects</h2>
         <p className={styles.intro}>
           A focused collection of practical builds and interface experiments.
         </p>

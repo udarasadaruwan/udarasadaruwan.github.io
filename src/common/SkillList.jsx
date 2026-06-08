@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 function SkillList({ src, skill }) {
   return (
     <span>
-      <img src={src} alt="Checkmark icon" />
+      <img src={src} alt="" aria-hidden="true" />
       <p>{skill}</p>
     </span>
   );

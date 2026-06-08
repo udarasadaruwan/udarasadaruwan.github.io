@@ -1,0 +1,16 @@
+{
+  "name": "Udara Sandaruwan Portfolio",
+  "short_name": "Udara",
+  "description": "Full-stack developer portfolio for Udara Sandaruwan.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#00ff3c",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32 48x48",
+      "type": "image/x-icon"
+    }
+  ]
+}

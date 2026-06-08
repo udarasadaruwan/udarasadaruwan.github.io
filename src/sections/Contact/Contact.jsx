@@ -15,16 +15,16 @@ function Contact() {
       .then((response) => {
         if (response.ok) {
           form.reset();
-          alert("🎊Thank you for your message. I will get back to you soon.🎊");
+          alert("Thank you for your message. I will get back to you soon.");
         } else {
           alert(
-            "⚠️Oops! There was a problem submitting your form. Please try again.⚠️",
+            "Oops! There was a problem submitting your form. Please try again.",
           );
         }
       })
       .catch(() => {
         alert(
-          "⚠️Oops! There was a problem submitting your form. Please try again.⚠️",
+          "Oops! There was a problem submitting your form. Please try again.",
         );
       });
   };
@@ -33,7 +33,7 @@ function Contact() {
     <section className={styles.container}>
       <div className={styles.headingBlock}>
         <p className={styles.eyebrow}>Let us build something</p>
-        <h1 className="sectionTitle">Contact</h1>
+        <h2 className="sectionTitle">Contact</h2>
         <p className={styles.intro}>
           Send a short message about your idea, project, or collaboration.
         </p>

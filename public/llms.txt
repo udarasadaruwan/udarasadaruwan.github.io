@@ -1,0 +1,12 @@
+# Udara Sandaruwan Portfolio
+
+Udara Sandaruwan is a full-stack developer building scalable web apps, smooth
+interfaces, reliable backends, and modern digital products.
+
+Website: https://udarasadaruwan.github.io/
+GitHub: https://github.com/udarasadaruwan
+LinkedIn: https://www.linkedin.com/in/udara-sandaruwan-ug0002/
+
+Core topics: React, JavaScript, TypeScript, Node.js, Java, Spring Boot,
+Express.js, Firebase, MongoDB, MySQL, Git, GitHub, frontend development,
+backend development, full-stack development, and DevOps.

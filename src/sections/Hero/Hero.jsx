@@ -87,6 +87,7 @@ function Hero() {
             href="https://x.com/sadaruvan_udara"
             target="_blank"
             rel="noreferrer"
+            aria-label="Visit Udara Sandaruwan on X"
           >
             <img src={twitterIcon} alt="Twitter icon" />
           </a>
@@ -94,6 +95,7 @@ function Hero() {
             href="https://github.com/udarasadaruwan"
             target="_blank"
             rel="noreferrer"
+            aria-label="Visit Udara Sandaruwan on GitHub"
           >
             <img src={githubIcon} alt="Github icon" />
           </a>
@@ -101,6 +103,7 @@ function Hero() {
             href="https://www.linkedin.com/in/udara-sandaruwan-ug0002/"
             target="_blank"
             rel="noreferrer"
+            aria-label="Visit Udara Sandaruwan on LinkedIn"
           >
             <img src={linkedinIcon} alt="Linkedin icon" />
           </a>
@@ -108,6 +111,7 @@ function Hero() {
             href="https://stackoverflow.com/users/24668489/udara-sandaruwan"
             target="_blank"
             rel="noreferrer"
+            aria-label="Visit Udara Sandaruwan on Stack Overflow"
           >
             <img src={stackOverflowIcon} alt="stackOverflow icon" />
           </a>

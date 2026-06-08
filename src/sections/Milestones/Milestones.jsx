@@ -70,7 +70,7 @@ function Milestones() {
     <section className={styles.container}>
       <div className={styles.headingBlock}>
         <p className={styles.eyebrow}>Progress timeline</p>
-        <h1 className="sectionTitle">Milestones</h1>
+        <h2 className="sectionTitle">Milestones</h2>
         <p className={styles.intro}>
           Education, degree progress, and the current path toward polished
           full-stack product building.
