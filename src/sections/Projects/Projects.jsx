@@ -1,5 +1,6 @@
 import styles from "./ProjectsStyles.module.css";
 import studio from "../../assets/studio.png";
+import helaeats from "../../assets/helaeats.png";
 import demo from "../../assets/demo.png";
 import ProjectCard from "../../common/ProjectCard";
 
@@ -13,11 +14,11 @@ function Projects() {
       tags: ["HTML", "CSS", "Bootstrap"],
     },
     {
-      src: demo,
-      link: "#",
-      h3: "Commerce Demo",
-      p: "Product-style interface concept with clean responsive sections.",
-      tags: ["Web app", "Design"],
+      src: helaeats,
+      link: "https://github.com/udarasadaruwan/hela-eats-frontend",
+      h3: "Hela Eats",
+      p: "Hela Eats is a personalized Recipe-to-Cart Platform designed to solve authentic Sri Lankan recipe discovery, meal planning, and automated ingredient shopping",
+      tags: ["React", "Nodejs", "Typescript", "Tailwind Css",],
     },
     {
       src: demo,
