@@ -17,8 +17,8 @@ function Projects() {
       src: helaeats,
       link: "https://github.com/udarasadaruwan/hela-eats-frontend",
       h3: "Hela Eats",
-      p: "Hela Eats is a personalized Recipe-to-Cart Platform designed to solve authentic Sri Lankan recipe discovery, meal planning, and automated ingredient shopping",
-      tags: ["React", "Nodejs", "Typescript", "Tailwind Css",],
+      p: "Hela Eats is a personalized Recipe-to-Cart Platform , I contribute as the Frontend Developer for this project",
+      tags: ["React", "Typescript", "Tailwind Css",],
     },
     {
       src: demo,
