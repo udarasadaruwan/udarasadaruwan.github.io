@@ -21,7 +21,6 @@ function Hero() {
     words: [
       "Full-stack developer",
       "tech enthusiast",
-      "Mobile photographer",
       "Devops Enthusiast",
     ],
     loop: {},
