@@ -99,7 +99,7 @@ function Hero() {
             <img src={githubIcon} alt="Github icon" />
           </a>
           <a
-            href="https://www.linkedin.com/in/udara-sandaruwan-ug0002/"
+            href="https://www.linkedin.com/in/udara--sandaruwan/"
             target="_blank"
             rel="noreferrer"
             aria-label="Visit Udara Sandaruwan on LinkedIn"
