@@ -28,7 +28,7 @@ function Hero() {
     cursorBlink: true,
   });
 
-  const themeIcon = theme === "light" ? sun : moon;
+  const themeIcon = theme === "light" ? moon : sun;
   const twitterIcon = theme === "light" ? twitterLight : twitterDark;
   const githubIcon = theme === "light" ? githubLight : githubDark;
   const linkedinIcon = theme === "light" ? linkedinLight : linkedinDark;
