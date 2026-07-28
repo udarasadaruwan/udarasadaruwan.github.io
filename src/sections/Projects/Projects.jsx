@@ -1,6 +1,7 @@
 import styles from "./ProjectsStyles.module.css";
 import studio from "../../assets/studio.png";
 import helaeats from "../../assets/helaeats.png";
+import zovex from "../../assets/zovex.png";
 import demo from "../../assets/demo.png";
 import ProjectCard from "../../common/ProjectCard";
 
@@ -21,11 +22,11 @@ function Projects() {
       tags: ["React", "Typescript", "Tailwind Css",],
     },
     {
-      src: demo,
-      link: "#",
-      h3: "Dashboard Demo",
-      p: "Operational layout concept focused on structure and scanning.",
-      tags: ["Frontend", "UX"],
+      src: zovex,
+      link: "https://github.com/udarasadaruwan/zovex-frontend",
+      h3: "Zovex",
+      p: "Zovex is a full-stack ecommerce marketplace with Stripe payments, Google OAuth, and role-based dashboards for customers, sellers, and admins.",
+      tags: ["React", "Typescript", "Express", "Node.js", "MongoDB", "stripe", "cloudinary"],
     },
     {
       src: demo,
