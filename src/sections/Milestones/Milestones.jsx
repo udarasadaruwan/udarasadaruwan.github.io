@@ -20,10 +20,10 @@ const milestones = [
   {
     date: "January, 2023",
     title: "Bachelor of Applied Information Technology",
-    status: "Undergraduate",
+    status: "Graduated",
     organization: "SLTC Research University",
     description:
-      "Studying applied information technology with a focus on software development, cloud computing, cybersecurity, and practical product-building skills.",
+      "Studied applied information technology with a focus on software development, cloud computing, cybersecurity, and practical product-building skills.",
     icon: FaGraduationCap,
   },
   {

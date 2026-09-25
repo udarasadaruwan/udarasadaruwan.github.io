@@ -1,39 +1,40 @@
-import styles from './SkillsStyles.module.css';
-import checkMarkIconDark from '../../assets/checkmark-dark.svg';
-import checkMarkIconLight from '../../assets/checkmark-light.svg';
-import SkillList from '../../common/SkillList';
-import { useTheme } from '../../common/ThemeContext';
-import IconCloud from '../../common/iconCloud';
-import { motion } from 'framer-motion';
+import styles from "./SkillsStyles.module.css";
+import checkMarkIconDark from "../../assets/checkmark-dark.svg";
+import checkMarkIconLight from "../../assets/checkmark-light.svg";
+import SkillList from "../../common/SkillList";
+import { useTheme } from "../../common/ThemeContext";
+import IconCloud from "../../common/iconCloud";
+import { motion } from "framer-motion";
 
 function Skills() {
   const { theme } = useTheme();
-  const checkMarkIcon = theme === 'light' ? checkMarkIconLight : checkMarkIconDark;
+  const checkMarkIcon =
+    theme === "light" ? checkMarkIconLight : checkMarkIconDark;
 
   const iconSlugs = [
-    'html5',
-    'css3',
-    'javascript',
-    'typescript',
-    'nodejs',
-    'java',
-    'mysql',
-    'react',
-    'angular',
-    'tailwindcss',
-    'mongodb',
-    'firebase',
-    'springboot',
-    'express',
-    'vitejs',
-    'git',
-    'github',
-    'jest',
-    'bootstrap',
-    'sass',
-    'python',
-    'intellijidea',
-    'visualstudiocode',
+    "html5",
+    "css3",
+    "javascript",
+    "typescript",
+    "nodejs",
+    "java",
+    "mysql",
+    "react",
+    "angular",
+    "tailwindcss",
+    "mongodb",
+    "firebase",
+    "springboot",
+    "express",
+    "vitejs",
+    "git",
+    "github",
+    "jest",
+    "bootstrap",
+    "sass",
+    "python",
+    "intellijidea",
+    "visualstudiocode",
   ];
 
   return (
@@ -59,6 +60,7 @@ function Skills() {
             <SkillList src={checkMarkIcon} skill="React Native" />
             <SkillList src={checkMarkIcon} skill="Angular" />
             <SkillList src={checkMarkIcon} skill="Tailwind CSS" />
+            <SkillList src={checkMarkIcon} skill="SCSS" />
           </div>
         </motion.div>
 

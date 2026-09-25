@@ -16,10 +16,10 @@
     transition: transform 260ms ease, filter 260ms ease;
   }
 
-  a {
+  .projectCard {
     position: relative;
     width: min(100%, 310px);
-    min-height: 390px;
+    min-height: 440px;
     display: flex;
     flex-direction: column;
     gap: 18px;
@@ -35,12 +35,12 @@
     transition: border-color 220ms ease, background 220ms ease;
   }
 
-  a:hover {
+  .projectCard:hover {
     border-color: var(--accent-color);
     background: var(--surface-strong-color);
   }
 
-  a:hover img {
+  .projectCard:hover img {
     transform: scale(1.035);
     filter: saturate(1.1);
   }
@@ -75,6 +75,55 @@
     font-size: 12px;
     font-weight: 700;
   }
+}
+
+.projectActions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 2px;
+}
+
+.projectActions a {
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+  color: var(--accent-color);
+  background: transparent;
+  border: 1px solid var(--accent-color);
+  border-radius: 0;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: border-color 200ms ease, color 200ms ease, transform 200ms ease;
+}
+
+.projectActions a:hover,
+.projectActions a:focus-visible {
+  color: var(--accent-2);
+  border-color: var(--accent-2);
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.projectActions a:focus-visible {
+  box-shadow: 0 0 0 3px rgba(61, 220, 151, 0.18);
+}
+
+.projectActions .disabledAction,
+.projectActions .disabledAction:hover,
+.projectActions .disabledAction:focus-visible {
+  color: var(--muted-text-color);
+  border-color: var(--border-color);
+  cursor: not-allowed;
+  opacity: 0.72;
+  transform: none;
 }
 
 .headingBlock {

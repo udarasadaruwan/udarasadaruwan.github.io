@@ -1,15 +1,14 @@
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
+import styles from '../sections/Projects/ProjectsStyles.module.css';
 
-function ProjectCard({ src, link, h3, p, tags = [] }) {
-  const isExternalLink = link.startsWith('http');
+function ProjectCard({ src, liveLink, codeLink, h3, p, tags = [] }) {
+  const hasLiveLink = liveLink && liveLink !== '#';
+  const hasCodeLink = codeLink && codeLink !== '#';
 
   return (
-    <motion.a
-      href={link}
-      target={isExternalLink ? '_blank' : undefined}
-      rel={isExternalLink ? 'noreferrer' : undefined}
-      aria-label={`View ${h3} project`}
+    <motion.article
+      className={styles.projectCard}
       whileHover={{ y: -10 }}
       transition={{ duration: 0.22 }}
     >
@@ -23,13 +22,44 @@ function ProjectCard({ src, link, h3, p, tags = [] }) {
           <small key={tag}>{tag}</small>
         ))}
       </span>
-    </motion.a>
+      <div className={styles.projectActions}>
+        <a
+          href={hasLiveLink ? liveLink : undefined}
+          target={hasLiveLink ? '_blank' : undefined}
+          rel={hasLiveLink ? 'noreferrer' : undefined}
+          aria-label={
+            hasLiveLink
+              ? `Open live ${h3} project`
+              : `${h3} live project link unavailable`
+          }
+          aria-disabled={!hasLiveLink}
+          className={!hasLiveLink ? styles.disabledAction : undefined}
+        >
+          Live
+        </a>
+        <a
+          href={hasCodeLink ? codeLink : undefined}
+          target={hasCodeLink ? '_blank' : undefined}
+          rel={hasCodeLink ? 'noreferrer' : undefined}
+          aria-label={
+            hasCodeLink
+              ? `Open ${h3} codebase`
+              : `${h3} codebase link unavailable`
+          }
+          aria-disabled={!hasCodeLink}
+          className={!hasCodeLink ? styles.disabledAction : undefined}
+        >
+          Codebase
+        </a>
+      </div>
+    </motion.article>
   );
 }
 
 ProjectCard.propTypes = {
   src: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired,
+  liveLink: PropTypes.string,
+  codeLink: PropTypes.string,
   h3: PropTypes.string.isRequired,
   p: PropTypes.string.isRequired,
   tags: PropTypes.arrayOf(PropTypes.string),
