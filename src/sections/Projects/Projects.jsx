@@ -2,7 +2,8 @@ import styles from "./ProjectsStyles.module.css";
 import studio from "../../assets/studio.png";
 import helaeats from "../../assets/helaeats.png";
 import zovex from "../../assets/zovex.png";
-import demo from "../../assets/demo.png";
+import dadukata from "../../assets/dadukata.png";
+// import demo from "../../assets/demo.png";
 import ProjectCard from "../../common/ProjectCard";
 
 function Projects() {
@@ -49,12 +50,19 @@ function Projects() {
       ],
     },
     {
-      src: demo,
-      liveLink: "#",
-      codeLink: "#",
-      h3: "API Demo",
-      p: "Backend-ready project concept for scalable service workflows.",
-      tags: ["Node.js", "API"],
+      src: dadukata,
+      liveLink: "https://udarasadaruwan.github.io/dadukata-game/",
+      codeLink: "https://github.com/udarasadaruwan/dadukata-game",
+      h3: "Dadukata",
+      p: "Dadukata is a realtime multiplayer Snakes & Ladders game built with React, TypeScript, and Firebase.",
+      tags: [
+        "Node.js",
+        "React",
+        "TypeScript",
+        "Firebase",
+        "Tailwind CSS",
+        "Motion",
+      ],
     },
   ];
 
