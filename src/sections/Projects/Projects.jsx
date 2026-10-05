@@ -1,20 +1,28 @@
 import styles from "./ProjectsStyles.module.css";
-import studio from "../../assets/studio.png";
 import helaeats from "../../assets/helaeats.png";
 import zovex from "../../assets/zovex.png";
 import dadukata from "../../assets/dadukata.png";
+import zerovastecafe from "../../assets/zerowastecafe.png";
 // import demo from "../../assets/demo.png";
 import ProjectCard from "../../common/ProjectCard";
 
 function Projects() {
   const projects = [
     {
-      src: studio,
-      liveLink: "https://udarasadaruwan.github.io/studio/",
-      codeLink: "https://github.com/udarasadaruwan/studio",
-      h3: "Studio",
-      p: "A polished demo website with a modern frontend flow.",
-      tags: ["HTML", "CSS", "Bootstrap"],
+      src: zerovastecafe,
+      liveLink: "https://udarasadaruwan.github.io/zero-waste-cafe/",
+      codeLink: "https://github.com/udarasadaruwan/zero-waste-cafe",
+      h3: "Zero waste cafe",
+      p: "Zero Waste Cafe is a responsive restaurant website built for a low-budget startup cafe to showcase its brand, menu, and WhatsApp-based table reservation flow. I designed and developed the frontend with a clean eco-friendly UI, reusable CSS color variables, and mobile-friendly layouts.",
+      tags: [
+        "HTML",
+        "CSS",
+        "javascript",
+        "Responsive Design",
+        "UI/UX Design",
+        "Media Queries",
+        "whatsapp integration",
+      ],
     },
     {
       src: helaeats,
