@@ -13,7 +13,7 @@ function Projects() {
       liveLink: "https://udarasadaruwan.github.io/zero-waste-cafe/",
       codeLink: "https://github.com/udarasadaruwan/zero-waste-cafe",
       h3: "Zero waste cafe",
-      p: "Zero Waste Cafe is a responsive restaurant website built for a low-budget startup cafe to showcase its brand, menu, and WhatsApp-based table reservation flow. I designed and developed the frontend with a clean eco-friendly UI, reusable CSS color variables, and mobile-friendly layouts.",
+      p: "Zero Waste Cafe is a responsive restaurant website for a low-budget startup cafe, showcasing its brand, menu, and WhatsApp reservation flow with a clean eco-friendly UI, reusable CSS color variables, and mobile-friendly layout.",
       tags: [
         "HTML",
         "CSS",

@@ -1,5 +1,5 @@
 import styles from "./HeroStyles.module.css";
-import heroImg from "../../assets/picofme (2).png";
+import heroImg from "../../assets/heroT.jpeg";
 import sun from "../../assets/sun.svg";
 import moon from "../../assets/moon.svg";
 import twitterLight from "../../assets/twitter-light.svg";
@@ -18,11 +18,7 @@ import { motion } from "framer-motion";
 function Hero() {
   const { theme, toggleTheme } = useTheme();
   const [text] = useTypewriter({
-    words: [
-      "Full-stack developer",
-      "tech enthusiast",
-      "Devops Enthusiast",
-    ],
+    words: ["Full-stack developer", "tech enthusiast", "Devops Enthusiast"],
     loop: {},
     delaySpeed: 2000,
     cursorBlink: true,
